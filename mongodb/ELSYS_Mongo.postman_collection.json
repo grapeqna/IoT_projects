@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "b608984e-5bfd-4cff-86bb-96f983105fe4",
+		"name": "ELSYS Mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23789022"
+	},
+	"item": [
+		{
+			"name": "Get all sensors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create sensor",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"manufacturer\": \"Siemens\",\r\n    \"room\": \"kitchen\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit sensor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"manufacturer\": \"Bosch\",\r\n    \"room\": \"garage\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete sensor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all sensor data of one sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create sensor data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete sensor data per id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/motion-sensors/{{motion_sensor_id}}/data/{{data_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"motion-sensors",
+						"{{motion_sensor_id}}",
+						"data",
+						"{{data_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "motion_sensor_id",
+			"value": "65f0be683d016bd7c0321c4f",
+			"type": "string"
+		},
+		{
+			"key": "data_id",
+			"value": "65f14873c19fdcffc2aeea6c",
+			"type": "string"
+		}
+	]
+}
