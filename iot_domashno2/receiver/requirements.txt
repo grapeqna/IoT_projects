@@ -1,0 +1,4 @@
+flask
+pysondb
+numpy
+matplotlib

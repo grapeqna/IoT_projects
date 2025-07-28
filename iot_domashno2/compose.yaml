@@ -1,0 +1,25 @@
+version: '3'
+
+volumes:
+  static:
+
+services:
+  receiver:
+    image: "domashno2_receiver"
+    volumes:
+      - /app/static
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network
+
+  sender:
+    image: "domashno2_sender"
+    depends_on:
+      - "receiver"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    name: my_network
