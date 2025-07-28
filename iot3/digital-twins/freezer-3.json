@@ -1,0 +1,24 @@
+{
+    "thingId": "freezer-3",
+    "policyId": "freezer-3",
+    "attributes": {
+        "manufacturer": "Samsung",
+        "number": 3
+    },
+    "features": {
+        "temperatureControl": {
+            "properties": {
+                "temperature": 40,
+                "humidity": 50
+            },
+            "desiredProperties": {
+                "temperature": -19
+            }
+        },
+        "state": {
+            "properties": {
+                "working": true
+            }
+        }
+    }
+}

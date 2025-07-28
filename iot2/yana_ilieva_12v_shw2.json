@@ -1,0 +1,33 @@
+{
+    "thingID": "car",
+    "policyId": "my-car",
+    "attributes": {
+        "make": "Toyota",
+        "model": "Belta",
+        "year": 2023,
+        "color": "Purple"
+    },
+    "features": {
+        "Engine": {
+            "properties": {
+                "type": "2SZ-FE", 
+                "horsepower": 106,
+                "fuelType": "Petrol-A-95"
+            }
+        },
+        "Tyres": {
+            "properties": {
+                "brand": "Michelin",
+                "size": "185 / 65 R15",
+                "type": "Winter"
+            }
+        },
+        "Radio": {
+            "properities":{
+                "brand": "Sony",
+                "station": "FM 102.5",
+                "volume": "66%"
+            }
+        }
+    }
+}
